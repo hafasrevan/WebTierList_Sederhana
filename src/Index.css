@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  color: #eeeeee;
+  background: #15151d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #15151d;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  background: #20202a;
+  border-bottom: 1px solid #353541;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  min-height: 65px;
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a78bfa;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  color: #b5b5c2;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  background: #343044;
+  color: #c4b5fd;
+}
+
+/* HOME PAGE */
+
+.home-page {
+  min-height: calc(100vh - 65px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 24px;
+}
+
+.home-hero {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.home-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 13px;
+  margin-bottom: 25px;
+  border: 1px solid #49405f;
+  border-radius: 20px;
+  background: #252333;
+  color: #c4b5fd;
+  font-size: 12px;
+}
+
+.home-hero h1 {
+  color: #eeeeee;
+  font-size: clamp(36px, 6vw, 62px);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.home-hero h1 span {
+  color: #a78bfa;
+}
+
+.home-hero > p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: #aaaaB8;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 20px;
+  border-radius: 7px;
+  background: #7656c9;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.home-button:hover {
+  background: #6545b5;
+}
+
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 55px;
+  text-align: left;
+}
+
+.home-feature {
+  padding: 20px;
+  background: #20202a;
+  border: 1px solid #353541;
+  border-radius: 9px;
+}
+
+.home-feature svg {
+  color: #a78bfa;
+  margin-bottom: 12px;
+}
+
+.home-feature h3 {
+  color: #eeeeee;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.home-feature p {
+  color: #aaaaB8;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* TIER LIST PAGE */
+
+.tier-list-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 24px;
+}
+
+.page-heading {
+  margin-bottom: 25px;
+}
+
+.page-heading h1 {
+  color: #eeeeee;
+  font-size: 29px;
+  margin-bottom: 7px;
+}
+
+.page-heading p {
+  color: #aaaaB8;
+  font-size: 13px;
+}
+
+/* GAME LIBRARY */
+
+.game-library {
+  padding: 20px;
+  margin-bottom: 25px;
+  background: #20202a;
+  border: 1px solid #353541;
+  border-radius: 9px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  color: #eeeeee;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.section-heading p {
+  color: #aaaaB8;
+  font-size: 12px;
+}
+
+.game-count {
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: #343044;
+  color: #c4b5fd;
+  font-size: 11px;
+}
+
+.game-library-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  min-height: 125px;
+}
+
+.empty-library {
+  color: #aaaaB8;
+  font-size: 13px;
+  padding: 20px 0;
+}
+
+/* GAME CARD */
+
+.game-card {
+  width: 140px;
+  min-width: 140px;
+  padding: 10px;
+  background: #292934;
+  border: 1px solid #41414e;
+  border-radius: 8px;
+  cursor: grab;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.game-card:hover {
+  border-color: #9476df;
+}
+
+.game-card:active {
+  cursor: grabbing;
+}
+
+.game-card-image {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #353541;
+  border: 1px dashed #666675;
+  border-radius: 5px;
+  color: #9999a8;
+}
+
+.game-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-card-info {
+  text-align: center;
+}
+
+.game-card-info h3 {
+  color: #eeeeee;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.game-card-info span {
+  color: #aaaaB8;
+  font-size: 11px;
+}
+
+/* TIER ROW */
+
+.tier-container {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.tier-row {
+  display: flex;
+  min-height: 140px;
+  overflow: hidden;
+  background: #20202a;
+  border: 1px solid #353541;
+  border-radius: 8px;
+}
+
+.tier-label {
+  width: 85px;
+  min-width: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.tier-label h2 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.tier-games {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  padding: 12px;
+}
+
+.tier-placeholder {
+  color: #858592;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.tier-s .tier-label {
+  background: #d94b5b;
+}
+
+.tier-a .tier-label {
+  background: #d98543;
+}
+
+.tier-b .tier-label {
+  background: #bca443;
+}
+
+.tier-c .tier-label {
+  background: #4286b5;
+}
+
+.tier-d .tier-label {
+  background: #8062ad;
+}
+
+/* NOT FOUND PAGE */
+
+.not-found-page {
+  min-height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.not-found-page > svg {
+  color: #a78bfa;
+  margin-bottom: 12px;
+}
+
+.not-found-page h1 {
+  color: #a78bfa;
+  font-size: 70px;
+}
+
+.not-found-page h2 {
+  color: #eeeeee;
+  margin-bottom: 10px;
+}
+
+.not-found-page p {
+  color: #aaaaB8;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .navbar-container {
+    padding: 0 12px;
+    min-height: 60px;
+  }
+
+  .navbar-brand {
+    font-size: 17px;
+  }
+
+  .navbar-menu {
+    gap: 2px;
+  }
+
+  .navbar-link {
+    gap: 4px;
+    padding: 8px 7px;
+    font-size: 10px;
+  }
+
+  .navbar-link svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .home-page {
+    padding: 40px 15px;
+  }
+
+  .home-features {
+    grid-template-columns: 1fr;
+    margin-top: 35px;
+  }
+
+  .tier-list-page {
+    padding: 25px 12px;
+  }
+
+  .page-heading h1 {
+    font-size: 25px;
+  }
+
+  .game-library {
+    padding: 14px;
+  }
+
+  .tier-row {
+    min-height: 115px;
+  }
+
+  .tier-label {
+    width: 58px;
+    min-width: 58px;
+  }
+
+  .tier-label h2 {
+    font-size: 27px;
+  }
+
+  .game-card {
+    width: 110px;
+    min-width: 110px;
+  }
+
+  .game-card-image {
+    height: 80px;
+  }
+}
+
+/* NEW COLOR THEME */
+
+body {
+  background: #171b22;
+  color: #e7ebf0;
+}
+
+.navbar,
+.game-library,
+.tier-row,
+.home-feature {
+  background: #222832;
+  border-color: #394452;
+}
+
+.navbar-brand,
+.home-hero h1 span,
+.home-feature svg,
+.not-found-page > svg,
+.not-found-page h1 {
+  color: #8eabc4;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  background: #303d4b;
+  color: #b4c9dc;
+}
+
+.home-badge,
+.game-count {
+  background: #303d4b;
+  border-color: #46576a;
+  color: #b4c9dc;
+}
+
+.home-button {
+  background: #607f9d;
+}
+
+.home-button:hover {
+  background: #506e8b;
+}
+
+.game-card {
+  background: #29313c;
+  border-color: #414d5b;
+}
+
+.game-card-image {
+  background: #343e4b;
+  border-color: #596777;
+}
+
+.tier-s .tier-label { background: #c96b72; }
+.tier-a .tier-label { background: #ce9160; }
+.tier-b .tier-label { background: #b9a45f; }
+.tier-c .tier-label { background: #608eae; }
+.tier-d .tier-label { background: #817ba5; }
+
+.game-image-placeholder {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #8eabc4;
+}
